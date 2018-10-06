@@ -28,15 +28,18 @@ h3 {
     display: inline-block;
     /* width: 300px; */
     height: 200px;
-    border-radius: 25px;
-    border: 2px solid #0c2438;    
+    border-radius: 2px;
+    border: 1px solid;    
     padding: 20px; 
+    margin: 5px;
+    
+    box-shadow: 0 1px 34px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .participantButton {
     /* background-color: #008CBA; */
     background-color: #0c2438;
-
     border: none;
     color: white;
     padding: 15px 32px;
@@ -46,4 +49,6 @@ h3 {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+
 }
+

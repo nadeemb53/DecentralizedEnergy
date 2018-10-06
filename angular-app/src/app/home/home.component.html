@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">  
      <h1 class="heading">Welcome to Decentralized Energy using Hyperledger Composer</h1>
   </div> 
@@ -16,16 +16,11 @@
 
       </div>
     </div> -->
- 
   <div class="row">
-    <br>
-  </div> 
-
-  <div class="row">
-    <h4> Step1 - Create and Update Participants </h4>
+    <h4> Please Create and Update Participants </h4>
   </div> 
     <div class="row">
-    <div class="participant col-md-4">
+    <div class="participant col-lg-6">
       <p> <strong>Residents</strong> own three assets: Energy, Coins and Cash. They can trade with fellow residents, banks, and utility companies.</p>
       <a [routerLink]="['/Resident']" class=participantButton>Residents</a> 
     </div>      
@@ -35,54 +30,16 @@
       <a [routerLink]="['/Bank']" class="participantButton">Banks</a>
     </div>   
   -->
-    <div class="participant col-md-4">
+    <div class="participant col-lg-6">
       <p> <strong>Utility Companies</strong> own two assets: Energy and Coins. They can trade with residents, who can buy or sell energy for coins. </p>
       <a [routerLink]="['/UtilityCompany']" class="participantButton">Utility Companies</a>
     </div> 
-  
   </div> 
-
-  <div class="row">
-    <br>
-  </div> 
-
-
-  <div class="row">
-    <h4> Step2 - Execute Transactions </h4>
-  </div> 
-
-  <div class="row"> 
-        
-    <div class="participant col-md-4">
-      <p> Execute a transaction between Residents by exchanging Coins for Energy </p>
-      <a [routerLink]="['/TransactionRR']" class=participantButton>Resident to Resident</a> 
-    </div>           
-<!--
-    <div class="participant col-md-4">
-      <p> Execute a transaction between a Resident and a Bank by exchanging Coins for Cash </p>
-      <a [routerLink]="['/TransactionRB']" class="participantButton">Resident to Bank</a>
-    </div> 
-
-
-    <div  value = "Transactions" [routerLink]="['/transaction']"/>
-
-    -->
-    <div class="participant col-md-4">
-      <p> Execute a transaction between a Resident and a Utility Company by exchanging Coins for Energy </p>
-      <a [routerLink]="['/TransactionRU']" class="participantButton">Resident to Utility</a>
-    </div>   
-    
-  </div> 
-
-  <div class="row">
-    <br>   
-    <div class=" col-md-4">
-        <p> Transactions </p>
-        <a [routerLink]="['/transaction']" class=participantButton>Let's  make a transaction</a> 
-      </div>
-  </div> 
-  <div class="row">
+    <div class="row">
         <br>
-  </div> 
-
+    </div> 
+      <div class="row">
+          <p> Transactions </p>
+          <a [routerLink]="['/transaction']" class=participantButton>Let's  make a transaction</a> 
+        </div>
 </div>
