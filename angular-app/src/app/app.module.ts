@@ -22,6 +22,7 @@ import { TransactionRUComponent } from './TransactionRU/TransactionRU.component'
 import { TransactionRBComponent } from './TransactionRB/TransactionRB.component';
 
 import { AllTransactionsComponent } from './AllTransactions/AllTransactions.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { AllTransactionsComponent } from './AllTransactions/AllTransactions.comp
 
     CoinsComponent,
 		EnergyComponent,		
-    CashComponent
+    CashComponent, TransactionComponent
 		
   ],
   imports: [

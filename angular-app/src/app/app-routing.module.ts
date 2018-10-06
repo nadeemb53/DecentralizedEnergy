@@ -17,6 +17,7 @@ import { TransactionRUComponent } from './TransactionRU/TransactionRU.component'
 import { TransactionRBComponent } from './TransactionRB/TransactionRB.component';
 
 import { AllTransactionsComponent } from './AllTransactions/AllTransactions.component';
+import {TransactionComponent} from './transaction/transaction.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
     { path: 'TransactionRR', component: TransactionRRComponent },
     { path: 'TransactionRU', component: TransactionRUComponent },
     { path: 'TransactionRB', component: TransactionRBComponent },
+    { path: 'transaction', component: TransactionComponent },
 
     { path: 'AllTransactions', component: AllTransactionsComponent },
 
