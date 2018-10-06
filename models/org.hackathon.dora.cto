@@ -19,49 +19,38 @@
 namespace org.hackathon.dora
 
 concept Location {
-  o String lat
-  o String long
-}
-
-participant Resident identified by residentID {
-    o String residentID
-    o String name
-    o Location location
-    o Double reputation
-    --> Coins coin
-    --> Energy energy
-}
-
-participant UtilityCompany identified by utilityID {
-    o String utilityID
-    o String name
-    o Location location
-    o Double reputation
-    --> Coins coin
-    --> Energy energy
+  o Double lat
+  o Double long
 }
 
 
-
-enum OwnerEntity {
+enum UserType {
   o Resident
   o UtilityCompany
+}
+
+participant User identified by userId {
+  o String userId
+  o String name
+  o Location location
+  o UserType type
+  o Double reputation
 }
 
 asset Coins identified by coinsID {
     o String coinsID
     o Double value
-    o String ownerID
-    o OwnerEntity ownerEntity
-    
+    -->User owner
 }
 
 asset Energy identified by energyId {
   o String energyId
   o String units
   o Double value
-  o String ownerID
-  o OwnerEntity ownerEntity
+  o Double produced
+  o Double sold
+  o Double used
+  --> User owner
 }
 
 enum ListingState {
@@ -71,30 +60,27 @@ enum ListingState {
 
 asset EnergyListing identified by energyListingId {
   o String energyListingId
-  o String ownerID
-  o OwnerEntity ownerEntity
+  -->User owner
   o ListingState state
   --> Energy energy
   o RequestEnergy[] requests optional
 }
 
 transaction UseEnergy {
+  -->User owner
   --> Energy energy
   o Double value
 }
 
 transaction RequestEnergy {
     o Double requiredEnergy
+    -->User requester
     -->Coins coin
-    o String requesterID
-    o OwnerEntity requestEntity
 }
 
 transaction giveEnergy {
   -->EnergyListing listing
   o Double energyRate
-  o String requesterID
-  o OwnerEntity requesterEntity
-  o String senderID
-  o OwnerEntity senderEntity
+  -->User requester
+  -->User sender
 }

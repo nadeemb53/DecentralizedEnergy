@@ -3,7 +3,7 @@
     "composer": "^0.20.1"
   },
   "name": "decentralized-energy",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "decentralized energy distribution app",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/decentralized-energy.bna",
