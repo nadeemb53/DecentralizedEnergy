@@ -16,6 +16,14 @@
  * Sample access control list.
  */
 
+rule EveryBodyCanRead {
+  description: "anyone can read"
+  participant: "org.hackathon.dora.*"
+  operation: READ
+  resource: "org.hackathon.dora.*"
+  action: ALLOW
+}
+
 rule SystemACL {
   description:  "System ACL to permit all access"
   participant: "org.hyperledger.composer.system.Participant"
