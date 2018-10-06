@@ -1,0 +1,8 @@
+/** Sample queries for Commodity Trading business network
+*/
+
+query getAllListing {
+  description: "Select all listing"
+  statement:
+      SELECT org.hackathon.dora.EnergyListing
+}
